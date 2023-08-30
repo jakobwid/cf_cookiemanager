@@ -1,0 +1,17 @@
+actor: FrontendTester
+modules:
+  enabled:
+    - WebDriver:
+        url: http://web:8000/typo3temp/var/tests/acceptance
+        browser: chrome
+        wait: 1
+        host: chrome
+    - \TYPO3\TestingFramework\Core\Acceptance\Helper\Acceptance
+    - Asserts
+
+extensions:
+enabled:
+     - CodingFreaks\CfCookiemanager\Tests\Acceptance\Support\Extension\FrontendEnvironment
+
+groups:
+  AcceptanceTests-Job-*: AcceptanceTests-Job-*
